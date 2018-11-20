@@ -1,25 +1,16 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+import TodoApp from './src/TodoApp'
+import store from './src/store'
+import { Provider } from 'react-redux'
 
-export default class HelloWorldApp extends Component {
+
+export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}> Hello World!</Text>
-      </View>
+      <Provider store={store}>
+        <TodoApp />
+      </Provider>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    marginTop: 60
-
-  },
-  title: {
-    fontSize: 100,
-    fontWeight: 'bold',
-  }
-})
