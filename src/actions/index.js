@@ -1,5 +1,5 @@
 
-import {ADD_TODO, TOGGLE_TODO} from './actionTypes'
+import { ADD_TODO, TOGGLE_TODO, DELETE_TODO, SET_VISIBILITY_FILTER } from './actionTypes'
 
 let nextId = 0
 
